@@ -1,3 +1,7 @@
+body{
+	background-color:rgb(224, 230, 224);
+}
+
 #title, .center{
 	display: block;
 	margin-left: auto;
@@ -8,9 +12,55 @@ button.center{
 	width: 6rem;
 	height: 3rem;
 	margin-top: 1rem;
+	padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
 #title{
 	color:red;
 	text-align: center;
+}
+
+#play {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #2e7d32;
+}
+#play:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+
+#options {
+    background-color: #2196F3;
+    color: white;
+    border: 2px solid #1976D2;
+}
+#options:hover {
+    background-color: white;
+    color: #2196F3;
+}
+
+#saves {
+    background-color: #FF9800;
+    color: white;
+    border: 2px solid #F57C00;
+}
+#saves:hover {
+    background-color: white;
+    color: #FF9800;
+}
+
+#exit {
+	background-color:rgb(255, 0, 0);
+    color: white;
+    border: 2px solid rgb(245, 0, 0);
+}
+#exit:hover{
+ 	background-color: white;
+    color:rgb(255, 0, 0);
 }
