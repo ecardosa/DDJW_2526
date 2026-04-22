@@ -2,7 +2,20 @@ addEventListener('load', function() {
     document.getElementById('play').addEventListener('click', 
     function(){
         sessionStorage.removeItem('load');
+        sessionStorage.gameMode = '1';
         window.location.assign("./html/game.html");
+    });
+
+    document.getElementById('play2').addEventListener('click', 
+    function(){
+        sessionStorage.removeItem('load');
+        sessionStorage.gameMode = '2';
+        window.location.assign("./html/game.html");
+    });
+
+    document.getElementById('scores').addEventListener('click', 
+    function(){
+        window.location.assign("./html/scores.html");
     });
 
     document.getElementById('options').addEventListener('click', 
