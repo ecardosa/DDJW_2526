@@ -1,6 +1,18 @@
 addEventListener('load', function() {
+    function setAlias(){
+        let alias = prompt("Introdueix el teu nom:", "Jugador");
+        if (alias === null || alias.trim() === ""){
+            setAlias();
+        } else {
+            sessionStorage.alias = alias.trim();
+        }
+
+    }
+    
+    
     document.getElementById('play').addEventListener('click', 
     function(){
+        setAlias();
         sessionStorage.removeItem('load');
         sessionStorage.gameMode = '1';
         window.location.assign("./html/game.html");
@@ -8,6 +20,7 @@ addEventListener('load', function() {
 
     document.getElementById('play2').addEventListener('click', 
     function(){
+        setAlias();
         sessionStorage.removeItem('load');
         sessionStorage.gameMode = '2';
         window.location.assign("./html/game.html");
@@ -25,25 +38,7 @@ addEventListener('load', function() {
 
     document.getElementById('saves').addEventListener('click', 
     function(){
-        let to_load = localStorage.save;
-        fetch('../php/load.php', {
-            method: "POST",
-            body: JSON.stringify({}),
-            headers: {"Content-type": "application/json; charset=UTF-8"}
-        })
-        .then(response => response.json())
-        .then(json => to_load = (!json.error)?JSON.stringify(json.save): localStorage.save)
-        .catch (err => {
-            console.error(err);
-            console.warn("La partida s'intentarà carregar de local");
-        });
-
-        if (!to_load) {
-            alert("No hi ha cap partida a carregar");
-            return;
-        }
-        sessionStorage.load = to_load;
-        window.location.assign("./html/game.html");
+        window.location.assign("./html/saves.html");
     });
 
     document.getElementById('exit').addEventListener('click', 

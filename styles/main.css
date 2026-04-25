@@ -9,7 +9,7 @@ body{
 }
 
 button.center{
-	width: 6rem;
+	width: 8rem;
 	height: 3rem;
 	margin-top: 1rem;
 	padding: 10px 20px;
@@ -63,4 +63,26 @@ button.center{
 #exit:hover{
  	background-color: white;
     color:rgb(255, 0, 0);
+}
+
+#play2 {
+    background-color: #9C27B0;
+    color: white;
+    border: 2px solid #7B1FA2;
+}
+
+#play2:hover {
+    background-color: white;
+    color: #9C27B0;
+}
+
+#scores {
+    background-color: #3F51B5;
+    color: white;
+    border: 2px solid #303F9F;
+}
+
+#scores:hover {
+    background-color: white;
+    color: #3F51B5;
 }
